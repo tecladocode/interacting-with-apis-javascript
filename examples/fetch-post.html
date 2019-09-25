@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            const url = 'http://localhost:5000/';
+            const data = { title: "The Matrix", year: "1994" };
+
+            fetch(
+                url,
+                {
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(data),
+                    method: "POST"
+                }
+            )
+            .then(data => data.json())
+            .then((json) => {
+                alert(JSON.stringify(json));
+            })
+        </script>
+    </body>
+</html>

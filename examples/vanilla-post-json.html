@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            const response = new XMLHttpRequest();
+
+            const json = JSON.stringify({
+                title: "The Matrix",
+                year: "1999"
+            });
+
+            response.open("POST", 'http://localhost:5000/')
+            response.setRequestHeader('Content-Type', 'application/json');
+
+            response.send(json);
+
+            response.onload = (e) => {
+                alert(response.response);
+            }
+        </script>
+    </body>
+</html>

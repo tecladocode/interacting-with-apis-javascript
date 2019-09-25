@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+                const url = 'http://localhost:5000/movies';
+                fetch(url)
+                .then(data => data.json())
+                .then((json) => {
+                    alert(JSON.stringify(json));
+                })
+        </script>
+    </body>
+</html>

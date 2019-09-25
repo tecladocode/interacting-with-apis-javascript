@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let formData = new FormData();
+
+            formData.append("title", "The Matrix");
+            formData.append("year", "1999");
+
+            let response = new XMLHttpRequest();
+            response.open("POST", "http://localhost:5000/");
+            response.send(formData);
+
+            response.onload = (e) => {
+                alert(response.response);
+            }
+        </script>
+    </body>
+</html>

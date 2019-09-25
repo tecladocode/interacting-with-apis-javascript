@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+                const request = new XMLHttpRequest();
+                const url = 'http://localhost:5000/movies';
+                request.open("GET", url);
+                request.send();
+
+                request.onload = (e) => {
+                    alert(request.response);
+                }
+        </script>
+    </body>
+</html>
